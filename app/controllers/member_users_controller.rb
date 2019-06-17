@@ -5,7 +5,7 @@ class MemberUsersController < ApplicationController
   
   def create
      #binding.pry
-    @member_user = MemberUser.new(name: params[:member_user][:name], email: params[:member_user][:email])
+    @member_user = MemberUser.new(member_user_params)
     if @member_user.save
       redirect_to root_path, success: '登録が完了しました'
     else

@@ -3,9 +3,10 @@ class SessionsController < ApplicationController
   end
   
   def create
-    user = MemberUser.find_by(email: params[:session][:email])
-    if user && user.authenticate(params[:session][:password])
-      log_in user
+    #binding.pry
+    member_user = MemberUser.find_by(email: params[:session][:email])
+    if member_user && member_user.authenticate(params[:session][:password])
+      log_in member_user
       redirect_to root_path, success: 'ログインに成功しました'
     else
       flash.now[:danger] = 'ログインに失敗しました'
@@ -13,8 +14,24 @@ class SessionsController < ApplicationController
     end
   end
   
-  private
-  def log_in(user)
-    session[:member_user_id] = member_user_id
+  def destroy
+    log_out
+    redirect_to root_url, info: 'ログアウトしました'
   end
+  
+  private
+  def log_in(member_user)
+    session[:member_user_id] = member_user.id
+  end
+  
+  def log_out
+    session.delete(:member_user_id)
+    @current_memberuser = nil
+  end
+  
+  def member_user_params
+    params.require(:member_user).permit(:name, :email, :password, :password_confirmation)
+  end
+  
+
 end

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get "/member_users" => "member_users#new"
   resources :member_users
+ 
   
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'  

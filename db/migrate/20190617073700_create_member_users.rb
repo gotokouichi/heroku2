@@ -9,9 +9,9 @@ class CreateMemberUsers < ActiveRecord::Migration[5.2]
       t.string :prefecture
       t.string :part
       t.string :genre
-      t.string :artist
+      t.string :artsit
       t.text :url
-      t.text :desscription
+      t.text :description
       t.timestamps
     end
   end

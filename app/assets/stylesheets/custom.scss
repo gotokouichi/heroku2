@@ -12,7 +12,7 @@ h1 {
   border: 1px solid #fff;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 20px;
+  font-size: 15px;
   background-color:  #4597F5;
 
   &:hover {
@@ -36,6 +36,10 @@ h1 {
   font-size: 40px;
 }
 
+.member-group-users-new-container {
+  padding-top: 220px;
+}
+
 .member-users-new-container {
   padding-top: 220px;
 }
@@ -49,4 +53,27 @@ h1 {
   position: fixed;
   width: 100%;
   z-index: 10000;
+}
+
+.navbar-transparent {
+  margin-bottom: 0px;
+  background-color: #CCCCCC;
+  a {
+    color: #CCCCCC !important;
+  }
+  
+  .navbar-brand {
+    color: #4597F5;
+    padding: 0px;
+    margin-top: 15px;
+  }
+  
+  img {
+    height: 40px;
+  }
+}
+
+.title {
+  color: #4597F5;
+  font-size: 50px;
 }
