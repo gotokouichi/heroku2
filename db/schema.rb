@@ -10,20 +10,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_17_082623) do
+ActiveRecord::Schema.define(version: 2019_06_19_101608) do
+
+  create_table "group_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "image"
+    t.string "name"
+    t.string "gender"
+    t.string "prefectures"
+    t.string "part"
+    t.string "genre"
+    t.string "artist"
+    t.string "url"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "member_users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "image"
+    t.string "name"
+    t.string "gender"
+    t.string "prefectures"
+    t.string "part"
+    t.string "genre"
+    t.string "artist"
+    t.string "url"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password"
-    t.string "image"
-    t.string "gender"
-    t.string "prefecture"
-    t.string "part"
-    t.string "genre"
-    t.string "artsit"
-    t.text "url"
-    t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"

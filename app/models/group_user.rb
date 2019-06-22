@@ -1,4 +1,4 @@
-class MemberUser < ApplicationRecord
+class GroupUser < ApplicationRecord
   validates :user_id, presence: true
   validates :image, presence: true
   validates :name, presence: true

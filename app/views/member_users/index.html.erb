@@ -1,0 +1,20 @@
+<div class="member_user-index-wrapper">
+  <div class="container">
+    <% @member_user.each do |member_user| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="member_user-index-single">
+            <h2 class="member_user-auther">
+              <%= member_user.user.name %>
+            </h2>
+            <%= image_tag member_user.image.url %>
+            <%= image_tag 'icons/comment.png', class: 'member_user-index-icon' %>
+            <p class="member_user-text">
+              <%= member_user.description %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>  
+  </div>
+</div>

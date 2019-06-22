@@ -36,11 +36,11 @@ h1 {
   font-size: 40px;
 }
 
-.member-group-users-new-container {
+.users-new-container {
   padding-top: 220px;
 }
 
-.member-users-new-container {
+.users-new-container {
   padding-top: 220px;
 }
 
@@ -77,3 +77,91 @@ h1 {
   color: #4597F5;
   font-size: 50px;
 }
+
+.btn-red {
+  color: #FF0000;
+  border: 1px solid #FF0000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.0);
+
+  &:hover {
+    color: #565656;
+  }
+}
+
+.group_user-new-wrapper {
+  padding-top: 120px;
+}
+
+.member_user-new-wrapper {
+  padding-top: 120px;
+}
+
+.member_user-index-wrapper {
+  padding-top: 70px;
+  background-color: #fafafa;
+  .member_user-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .member_user-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .member_user-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .topic-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.group_user-index-wrapper {
+  padding-top: 70px;
+  background-color: #fafafa;
+  .group_user-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .group_user-author {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .group_user-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .group_user-index-icon {
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.profile-title {
+  font-size: 30px;
+}
+
