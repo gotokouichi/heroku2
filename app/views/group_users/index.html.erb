@@ -1,0 +1,38 @@
+<div class="group_user-index-wrapper">
+  <div class="container">
+    <p class="search">ーグループを探すー</p>
+    <% @group_users.each do |group_user| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="group_user-index-single">
+            <h2 class="group_user-author">
+              <%= group_user.name %>
+            </h2>
+            <%= image_tag group_user.image.url %>
+            <div class="form-group">
+              <%= group_user.gender %>
+            </div>
+            <div class="form-group">
+              <%= group_user.prefectures %>
+            </div>
+            <div class="form-group">
+              <%= group_user.part %>
+            </div>
+            <div class="form-group">
+              <%= group_user.genre %>
+            </div>
+            <div class="form-group">
+              <%= group_user.artist %>
+            </div>
+            
+            
+            <%= link_to group_user_path(id: group_user.id),method: :get,class: 'btn btn-primary' do %>
+              プロフィール詳細
+            <% end %>
+            
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

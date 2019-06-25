@@ -8,9 +8,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       log_in user
       if user.group_user.blank?
-        redirect_to new_member_user_path, success: 'ログインに成功しました'
+        redirect_to group_users_path, success: 'ログインに成功しました'
       else
-        redirect_to new_group_user_path, success: 'ログインに成功しました'
+        redirect_to member_users_path, success: 'ログインに成功しました'
       end
     else
       flash.now[:danger] = 'ログインに失敗しました'

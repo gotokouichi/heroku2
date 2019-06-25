@@ -4,22 +4,23 @@ class GroupUsersController < ApplicationController
   end
     
   def new
-    binding.pry
     @group_user = GroupUser.new
   end
   
   def create
-    
     @group_user = GroupUser.new(group_user_params)
     @group_user.user_id = current_user.id
     
     if @group_user.save
-      log_in @user
       redirect_to new_group_user_path, success: '登録に成功しました'
     else
       flash.now[:danger] = "登録に失敗しました"
       render :new
     end
+  end
+  
+  def show
+    @group_user = GroupUser.find(params[:id])
   end
   
   private

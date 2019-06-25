@@ -8,8 +8,8 @@ class MemberUsersController < ApplicationController
   end
   
   def create
-    @member = MemberUser.new(member_user_params)
-    @member.user_id = current_user.id
+    @member_user = MemberUser.new(member_user_params)
+    @member_user.user_id = current_user.id
     
     if @member_user.save
       redirect_to new_member_user_path, success: '登録に成功しました'
@@ -17,6 +17,10 @@ class MemberUsersController < ApplicationController
       flash.now[:danger] = "登録に失敗しました"
       render :new
     end
+  end
+  
+  def show
+    @member_user = MemberUser.find(params[:id])
   end
   
   private

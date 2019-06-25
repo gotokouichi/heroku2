@@ -4,7 +4,6 @@
     <title>Session</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -17,31 +16,31 @@
     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
       <div class="container">
         <%= link_to root_path do %>
-          <p class="title">Session</p>
+           <span class="navbar-brand">Session</span>
         <% end %>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
-          <li>
-            <%= link_to logout_path, method: :delete do %>
-              <%= image_tag "icons/logout.png" %>
-            <% end %>
-          </li>
+            <li>
+              <%= link_to logout_path, method: :delete do %>
+                <%= image_tag "icons/logout.png" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to group_users_new_path do %>
+                <%= image_tag "icons/register.png" %>
+              <% end %>
+            </li>
           <% else %>
-          <li>
-            <%= link_to member_users_new_path do %>
-              <%= image_tag "icons/register.png" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to login_path do %>
-              <%= image_tag "icons/login.png" %>
-            <% end %>
-          </li>
+            <li>
+              <%= link_to login_path do %>
+                <%= image_tag "icons/login.png" %>
+              <% end %>
+            </li>
           <% end %>
         </ul>
       </div>
     </nav>
-
+    
     <%= yield %>
     
     <script>

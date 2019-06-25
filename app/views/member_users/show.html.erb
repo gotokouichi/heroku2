@@ -1,43 +1,36 @@
 <div class="member_user-index-wrapper">
   <div class="container">
-    <p class="search">ーメンバーを探すー</p>
-    <% @member_users.each do |member_user| %>
+    <p class="search">ーメンバーを探すー詳細</p>
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
           <div class="member_user-index-single">
             <h2 class="member_user-author">
-              <%= member_user.name %>
+              <%= @member_user.name %>
             </h2>
-            <%= image_tag member_user.image.url %>
+            <%= image_tag @member_user.image.url %>
             <div class="form-group">
-              <%= member_user.gender %>
+              <%= @member_user.gender %>
             </div>
             <div class="form-group">
-              <%= member_user.prefectures %>
+              <%= @member_user.prefectures %>
             </div>
             <div class="form-group">
-              <%= member_user.part %>
+              <%= @member_user.part %>
             </div>
             <div class="form-group">
-              <%= member_user.genre %>
+              <%= @member_user.genre %>
             </div>
             <div class="form-group">
-              <%= member_user.artist %>
+              <%= @member_user.artist %>
             </div>
             <div class="form-group">
-              <%= member_user.url %>
+              <%= @member_user.url %>
             </div>
             <div class="form-group">
-              <%= member_user.description %>
+              <%= @member_user.description %>
             </div>
-            
-            <%= link_to member_user_path(id: member_user.id),method: :get,class: 'btn btn-primary' do %>
-              プロフィール詳細
-            <% end %>
-            
           </div>
         </div>
       </div>
-    <% end %>
   </div>
 </div>

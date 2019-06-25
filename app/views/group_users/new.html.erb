@@ -1,18 +1,18 @@
 <div class="group_user-new-wrapper" >
   <div class="container">
     <div class="row">
-      <h1 class="profile-title">プロフィール設定</h1>
-      <div class="col-md-4 col-md-offsest-1">
+      <div class="col-md-offset-2 col-md-8 users-new-container">
+        <h1 class="profile-title">プロフィール設定</h1>
         <%= form_for @group_user do |f| %>
           <div class="form-group">
             <%= f.label :image %>
             <%= f.file_field :image %>
           </div>
-      </div>
-      <div class="col-md-8 col-md-offsest-2">
-          <div class="form-group">
-            <%= f.label :name %>
-            <%= f.text_area :name, class: 'form-control' %>
+          
+          <div>
+            <p><label></label></p>
+            <%= f.label :name, class: 'text-white' %>
+            <%= f.text_field :name, class: 'form-control' %>
           </div>
           
           <div class="form-group">
@@ -49,14 +49,11 @@
             <%= f.label :description %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
+      
+         <%= f.submit "登録", class: 'btn-block btn-primary' %>
+        <% end %>
+        <%= link_to 'ログインはこちら', login_path, class: 'login-text' %>
       </div>
-   <div class="row">
-    <div class="col-md-3"></div>
-    <div class="col-md-5"> <%= f.submit '確定', class: 'btn btn-block btn-blue' %></div>
-     <% end %>
-    <div class="col-md-4"><%= link_to 'ログインはこちら', login_path, class: 'text-blue' %> </div>
-  </div>
     </div>
   </div>
 </div>
-

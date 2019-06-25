@@ -57,25 +57,25 @@ h1 {
 
 .navbar-transparent {
   margin-bottom: 0px;
-  background-color: #CCCCCC;
+  background-color: #CCCCCC	;
   a {
-    color: #CCCCCC !important;
+    color: #fff !important;
   }
-  
+
   .navbar-brand {
-    color: #4597F5;
     padding: 0px;
     margin-top: 15px;
+    color: #4597F5;
+    font-size: 50px;
   }
-  
+
   img {
     height: 40px;
   }
 }
 
-.title {
+.bg-primary {
   color: #4597F5;
-  font-size: 50px;
 }
 
 .btn-red {
@@ -92,11 +92,11 @@ h1 {
 }
 
 .group_user-new-wrapper {
-  padding-top: 120px;
+  padding-top: 10px;
 }
 
 .member_user-new-wrapper {
-  padding-top: 120px;
+  padding-top: 10px;
 }
 
 .member_user-index-wrapper {
@@ -165,3 +165,13 @@ h1 {
   font-size: 30px;
 }
 
+.search {
+  font-size: 25px;
+  padding-top: 20px;
+  color: #4597F5;
+}
+
+.login-text {
+  color: #4597F5;
+  padding-bottom: 70px;
+}
