@@ -40,10 +40,6 @@ h1 {
   padding-top: 220px;
 }
 
-.users-new-container {
-  padding-top: 220px;
-}
-
 .form-group {
   margin-bottom: 20px;
 }
@@ -109,6 +105,7 @@ h1 {
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
+    
     .member_user-author {
       padding-right: 20px;
       padding-left: 20px;
@@ -140,6 +137,7 @@ h1 {
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
@@ -175,3 +173,42 @@ h1 {
   color: #4597F5;
   padding-bottom: 70px;
 }
+
+.btn-primary {
+  
+}
+
+.group_user-show-one {
+  background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 30px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+   
+    
+    img {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+}
+
+.group_user-show-two {
+  background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 30px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    padding-left: 50px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>thead>tr>th {
+    border-style: none;
+}
+
+

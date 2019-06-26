@@ -2,53 +2,53 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-2 col-md-8 users-new-container">
-        <h1 class="profile-title">プロフィール設定</h1>
+        <h1 class="profile-title">メンバープロフィール設定</h1>
         <%= form_for @member_user do |f| %>
           <div class="form-group">
-            <%= f.label :image %>
+            <%= f.label :image, "画像" %>
             <%= f.file_field :image %>
           </div>
           
           <div>
-            <%= f.label :name, class: 'text-white' %>
+            <%= f.label :name, "名前" %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :gender %>
+            <%= f.label :gender, "性別" %>
             <%= f.text_area :gender, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :prefectures %>
+            <%= f.label :prefectures, "都道府県" %>
             <%= f.text_area :prefectures, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :part %>
+            <%= f.label :part, "担当パート" %>
             <%= f.text_area :part, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :genre %>
+            <%= f.label :genre, "好きなジャンル" %>
             <%= f.text_area :genre, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :artist %>
+            <%= f.label :artist, "好きなアーティスト" %>
             <%= f.text_area :artist, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :url %>
+            <%= f.label :url, "URL" %>
             <%= f.text_area :url, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :description %>
+            <%= f.label :description, "自己PR" %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
-         
+          
          <%= f.submit "登録", class: 'btn-block btn-primary' %>
         <% end %>
         <%= link_to 'ログインはこちら', login_path, class: 'login-text' %>

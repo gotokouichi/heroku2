@@ -2,33 +2,47 @@
   <div class="container">
     <p class="search">ーメンバーを探すー詳細</p>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="member_user-index-single">
-            <h2 class="member_user-author">
+        <div class="col-md-4">
+          <div class="group_user-show-one">
+            <%= image_tag @member_user.image.url %>
+          </div>
+        </div>
+        
+        <div class="col-md-8">
+          <div class="group_user-show-two"> 
+            <h2 class="group_user-author">
               <%= @member_user.name %>
             </h2>
-            <%= image_tag @member_user.image.url %>
-            <div class="form-group">
-              <%= @member_user.gender %>
-            </div>
-            <div class="form-group">
-              <%= @member_user.prefectures %>
-            </div>
-            <div class="form-group">
-              <%= @member_user.part %>
-            </div>
-            <div class="form-group">
-              <%= @member_user.genre %>
-            </div>
-            <div class="form-group">
-              <%= @member_user.artist %>
-            </div>
-            <div class="form-group">
-              <%= @member_user.url %>
-            </div>
-            <div class="form-group">
-              <%= @member_user.description %>
-            </div>
+            <table class="table">
+              <tr>
+                <th>性別</th>
+                <td><%= @member_user.gender %></td>
+              </tr>
+              <tr>
+                <th>都道府県</th>
+                <td><%= @member_user.prefectures %></td>
+              </tr>
+              <tr>
+                <th>担当パート</th>
+                <td><%= @member_user.part %></td>
+              </tr>
+              <tr>
+                <th>好きなジャンル</th>
+                <td><%= @member_user.genre %></td>
+              </tr>
+              <tr>
+                <th>好きなアーティスト</th>
+                <td><%= @member_user.artist %></td>
+              </tr>
+              <tr>
+                <th>URL</th>
+                <td><%= @member_user.url %></td>
+              </tr>
+              <tr>
+                <th>自己PR</th>
+                <td><%= @member_user.description %></td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>

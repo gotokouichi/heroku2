@@ -3,36 +3,42 @@
     <p class="search">ーグループを探すー</p>
     <% @group_users.each do |group_user| %>
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-4 col-md-offset-1">
           <div class="group_user-index-single">
             <h2 class="group_user-author">
               <%= group_user.name %>
             </h2>
             <%= image_tag group_user.image.url %>
-            <div class="form-group">
-              <%= group_user.gender %>
-            </div>
-            <div class="form-group">
-              <%= group_user.prefectures %>
-            </div>
-            <div class="form-group">
-              <%= group_user.part %>
-            </div>
-            <div class="form-group">
-              <%= group_user.genre %>
-            </div>
-            <div class="form-group">
-              <%= group_user.artist %>
-            </div>
+            <table class="table">
+              <tr>
+                <th>性別</th>
+                <td><%= group_user.gender %></td>
+              </tr>
+              <tr>
+                <th>活動地域</th>
+                <td><%= group_user.prefectures %></td>
+              </tr>
+              <tr>
+                <th>募集パート</th>
+                <td><%= group_user.part %></td>
+              </tr>
+              <tr>
+                <th>好きなジャンル</th>
+                <td><%= group_user.genre %></td>
+              </tr>
+              <tr>
+                <th>好きなアーティスト</th>
+                <td><%= group_user.artist %></td>
+              </tr>
+            </table>
             
-            
-            <%= link_to group_user_path(id: group_user.id),method: :get,class: 'btn btn-primary' do %>
-              プロフィール詳細
+            <%= link_to group_user_path(id: group_user.id),method: :get,class: 'btn btn-white' do %>
+              ープロフィール詳細ー
             <% end %>
             
           </div>
         </div>
+      <% end %>
       </div>
-    <% end %>
   </div>
 </div>
