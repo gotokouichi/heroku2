@@ -6,5 +6,6 @@ class User < ApplicationRecord
   has_secure_password
   has_one :member_user
   has_one :group_user
-
+  
+  
 end

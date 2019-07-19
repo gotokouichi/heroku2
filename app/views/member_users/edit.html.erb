@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-offset-2 col-md-8 users-new-container">
-        <h1 class="profile-title">メンバープロフィール設定</h1>
+        <h1 class="profile-title">メンバープロフィール編集</h1>
         <%= form_for @member_user do |f| %>
           <div class="form-group">
             <%= f.label :image, "画像" %>
@@ -49,10 +49,9 @@
             <%= f.text_area :description, class: 'form-control' %>
           </div>
          <div class="col-md-offset-4 col-md-4 register-users-new-container"> 
-           <%= f.submit "登録", class: 'btn-block btn-primary' %>
+           <%= f.submit "更新", class: 'btn-block btn-primary' %>
          </div>
-         <% end %>
-        <%= link_to 'ログインはこちら', login_path, class: 'login-text' %>
+        <% end %>
       </div>
     </div>
   </div>

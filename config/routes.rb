@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :users
   resources :member_users
   resources :group_users
+  resources :messages
+  
   
   get '/member_or_group', to: 'users#member_or_group'
   post '/member_or_group', to: 'users#create'
@@ -18,4 +20,8 @@ Rails.application.routes.draw do
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'  
   delete '/logout', to: 'sessions#destroy'
+  
+  get '/messages_new', to: 'users#messages_new'
+  post '/messages_new', to: 'users#index'
+ 
 end

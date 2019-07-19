@@ -25,11 +25,19 @@
                 <%= image_tag "icons/logout.png" %>
               <% end %>
             </li>
+            <% if login_group_user.blank? %>
             <li>
-              <%= link_to group_users_new_path do %>
+              <%= link_to edit_member_user_path (current_user.id) do %>
                 <%= image_tag "icons/register.png" %>
               <% end %>
             </li>
+            <% else %>
+            <li>
+              <%= link_to edit_group_user_path (current_user.id) do %>
+                <%= image_tag "icons/register.png" %>
+              <% end %>
+            </li>
+            <% end %>
           <% else %>
             <li>
               <%= link_to login_path do %>

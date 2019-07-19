@@ -1,16 +1,16 @@
-<div class="member_user-new-wrapper" >
+<div class="group_user-new-wrapper" >
   <div class="container">
     <div class="row">
       <div class="col-md-offset-2 col-md-8 users-new-container">
-        <h1 class="profile-title">メンバープロフィール設定</h1>
-        <%= form_for @member_user do |f| %>
+        <h1 class="profile-title">グループプロフィール編集</h1>
+        <%= form_for @group_user do |f| %>
+        
           <div class="form-group">
             <%= f.label :image, "画像" %>
             <%= f.file_field :image %>
           </div>
-          
           <div>
-            <%= f.label :name, "名前" %>
+            <%= f.label :name, "バンド名"  %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
           
@@ -20,12 +20,12 @@
           </div>
           
           <div class="form-group">
-            <%= f.label :prefectures, "都道府県" %>
+            <%= f.label :prefectures, "活動地域" %>
             <%= f.text_area :prefectures, class: 'form-control' %>
           </div>
           
           <div class="form-group">
-            <%= f.label :part, "担当パート" %>
+            <%= f.label :part, "募集パート" %>
             <%= f.text_area :part, class: 'form-control' %>
           </div>
           
@@ -45,14 +45,14 @@
           </div>
           
           <div class="form-group">
-            <%= f.label :description, "自己PR" %>
+            <%= f.label :description, "PR文" %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
-         <div class="col-md-offset-4 col-md-4 register-users-new-container"> 
-           <%= f.submit "登録", class: 'btn-block btn-primary' %>
+      
+         <div class="col-md-offset-4 col-md-4 register-users-new-container">
+           <%= f.submit "更新", class: 'btn-block btn-primary' %>
          </div>
-         <% end %>
-        <%= link_to 'ログインはこちら', login_path, class: 'login-text' %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -8,7 +8,9 @@ class MemberUsersController < ApplicationController
   end
   
   def create
+    
     @member_user = MemberUser.new(member_user_params)
+    
     @member_user.user_id = current_user.id
     
     if @member_user.save
@@ -21,6 +23,21 @@ class MemberUsersController < ApplicationController
   
   def show
     @member_user = MemberUser.find(params[:id])
+  end
+  
+  def edit
+    @member_user = MemberUser.find_by(user_id:params[:id])
+  end
+  
+  def update
+    #binding.pry
+    @member_user = MemberUser.find(params[:id])
+    if @member_user.update(member_user_params)
+      redirect_to member_user_path, success: 'プロフィールを更新しました'
+    else
+      flash.now[:danger] = "更新に失敗しました"
+      render :edit
+    end
   end
   
   private

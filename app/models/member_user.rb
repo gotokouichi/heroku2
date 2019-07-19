@@ -13,4 +13,5 @@ class MemberUser < ApplicationRecord
   
   
   mount_uploader :image, ImageUploader
+ 
 end

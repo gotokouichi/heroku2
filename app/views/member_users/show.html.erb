@@ -36,13 +36,28 @@
               </tr>
               <tr>
                 <th>URL</th>
-                <td><%= @member_user.url %></td>
+                <td><% iframe = content_tag(
+                        :iframe,
+                        '',
+                        width: 560,
+                        height: 315,
+                        src: "https://www.youtube.com/embed/#{@member_user.url}",
+                        # src: "https://www.youtube.com/embed/5GQnC6UUsZw",
+                        frameborder: 0,
+                        allowfullscreen: true
+                    ) %>
+                    <%= content_tag(:div, iframe, class: 'youtube-container') %>
+                </td>
               </tr>
-              <tr>
+
                 <th>自己PR</th>
                 <td><%= @member_user.description %></td>
               </tr>
             </table>
+            
+             <%= link_to messages_new_path(id: @member_user.id),method: :get, class: 'btn btn-primary' do %>
+                メッセージを送る
+              <% end %>
           </div>
         </div>
       </div>
