@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/help'
   get "/users" => "users#new"
-  
+  get '/users/messages', to: 'users#messages'
   resources :users
   resources :member_users
   resources :group_users
@@ -23,5 +23,5 @@ Rails.application.routes.draw do
   
   get '/messages_new', to: 'users#messages_new'
   post '/messages_new', to: 'users#index'
- 
+  
 end

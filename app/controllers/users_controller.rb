@@ -15,9 +15,15 @@ class UsersController < ApplicationController
     end
   end
   
- 
-    
-
+  def messages_new
+  end
+  
+  def messages
+    to_user_id = params[:to_user_id].to_i
+    @messages = Message.where("(from_user_id = ? AND to_user_id = ?) OR (from_user_id = ? AND to_user_id = ?)", current_user.id, to_user_id, current_user.id, to_user_id)
+    # binding.pry
+  end
+  
   private
   def log_in(user)
     session[:user_id] = user.id
@@ -27,8 +33,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
-  
-  
   
   private 
   def member_or_group
