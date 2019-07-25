@@ -25,6 +25,11 @@
                 <%= image_tag "icons/logout.png" %>
               <% end %>
             </li>
+            <li>
+              <%= link_to  users_messages_path, method: :get do %>
+                <%= image_tag "icons/comment2.png" %>
+              <% end %>
+            </li>
             <% if login_group_user.blank? %>
             <li>
               <%= link_to edit_member_user_path (current_user.id) do %>
