@@ -49,13 +49,12 @@
                     <%= content_tag(:div, iframe, class: 'youtube-container') %>
                 </td>
               </tr>
-
                 <th>自己PR</th>
                 <td><%= @member_user.description %></td>
               </tr>
             </table>
             
-             <%= link_to new_message_path(to_user_id: @member_user.id),method: :get, class: 'btn btn-primary' do %>
+             <%= link_to new_message_path(to_user_id: @member_user.user.id),method: :get, class: 'btn btn-primary' do %>
                 メッセージを送る
               <% end %>
           </div>

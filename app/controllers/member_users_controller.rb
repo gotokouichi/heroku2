@@ -23,6 +23,7 @@ class MemberUsersController < ApplicationController
   
   def show
     @member_user = MemberUser.find(params[:id])
+    #Dbinding.pry
   end
   
   def edit
