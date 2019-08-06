@@ -23,7 +23,7 @@ class MemberUsersController < ApplicationController
   
   def show
     @member_user = MemberUser.find(params[:id])
-    #Dbinding.pry
+    #binding.pry
   end
   
   def edit
@@ -40,6 +40,8 @@ class MemberUsersController < ApplicationController
       render :edit
     end
   end
+  
+ 
   
   private
   def log_in(user)

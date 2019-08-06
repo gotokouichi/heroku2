@@ -3,15 +3,27 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <% @messages.each do |message| %>
-          <div class="message-message-single">
-            <h4 class="message-author">
-              <%= message.from_user.name %>
-            </h4>
-            <p class="message-text">
-              <%= message.content %>
-            </p>
-            <%= message.created_at.strftime('%Y/%m/%d/%H:%M') %>
-          </div>
+          <% if current_user.id == message.from_user_id %>
+            <div class="message-message-single-my">
+              <h5 class="message-author">
+                <%= message.from_user.name %>
+              </h5>
+              <div class="message-text">
+                <%= message.content %>
+              </div>
+              <%= message.created_at.strftime('%Y/%m/%d/%H:%M') %>
+            </div>
+          <% else %>  
+            <div class="message-message-single-you">
+              <h5 class="message-author">
+                <%= message.from_user.name %>
+              </h5>
+              <div class="message-text">
+                <%= message.content %>
+              </div>
+              <%= message.created_at.strftime('%Y/%m/%d/%H:%M') %>
+            </div>
+          <% end %>  
         <% end %>
       </div>
     </div>

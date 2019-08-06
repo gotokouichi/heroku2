@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   get 'pages/help'
   get "/users" => "users#new"
   get '/users/messages', to: 'users#messages'
+  get '/member_users/message_list', to: 'member_users#message_list'
+ 
   resources :users
   resources :member_users
   resources :group_users
   resources :messages
-  
+ 
   
   get '/member_or_group', to: 'users#member_or_group'
   post '/member_or_group', to: 'users#create'

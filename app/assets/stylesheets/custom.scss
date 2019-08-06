@@ -112,23 +112,17 @@ h1 {
     }
     
     img {
-      
-      
-      padding-right: 20px;
-      padding-left: 20px;
-      
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin-left: 40px;
     }
 
     .member_user-text {
       padding-right: 20px;
       padding-left: 20px;
-    }
-
-    img {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      width: 100%;
-      padding-right: 20px;
     }
 
     .topic-index-icon {
@@ -158,8 +152,10 @@ h1 {
     img {
       margin-top: 10px;
       margin-bottom: 20px;
-      width: 100%;
-      padding-right: 20px;
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin-left: 40px;
     }
     
     .group_user-text {
@@ -262,4 +258,14 @@ h1 {
       width: 50px;
     }
   }
+}
+
+.message-message-single-my {
+  width: 100%;
+  text-align: left;
+}
+
+.message-message-single-you {
+ width: 100%; 
+ text-align: right; 
 }
