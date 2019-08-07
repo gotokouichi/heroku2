@@ -15,8 +15,18 @@
     
     <nav class="navbar navbar-default navbar-transparent">
       <div class="container">
-        <%= link_to root_path do %>
-           <span class="navbar-brand">Session</span>
+        <% if logged_in? && login_group_user.blank? %>
+          <%= link_to group_users_path do %>
+            <span class="navbar-brand">Session</span>
+          <% end %>
+        <% elsif logged_in? && login_member_user.blank? %>
+          <%= link_to member_users_path do %>
+            <span class="navbar-brand">Session</span>
+          <% end %>  
+        <% else %>
+          <%= link_to root_path do %>
+             <span class="navbar-brand">Session</span>
+          <% end %> 
         <% end %>
         <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
