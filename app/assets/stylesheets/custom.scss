@@ -262,10 +262,35 @@ h1 {
 
 .message-message-single-my {
   width: 100%;
-  text-align: left;
+  text-align: right;
 }
 
 .message-message-single-you {
  width: 100%; 
- text-align: right; 
+ text-align: left; 
 }
+
+.message-text1 { 
+  font-size: 20px;
+  display: inline-block;
+  text-align: left; 
+  background-color: #00bfff;
+  border: 1px solid #00bfff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.message-text2 { 
+  font-size: 20px;
+  display: inline-block;
+  background-color: #FFF;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.date {
+  margin-bottom: 10px;
+}
+
+
