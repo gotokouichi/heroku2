@@ -22,7 +22,7 @@ class MemberUsersController < ApplicationController
   end
   
   def show
-    @member_user = MemberUser.find(params[:id])
+    @member_user_show = MemberUser.find(params[:id])
     #binding.pry
   end
   

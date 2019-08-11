@@ -4,35 +4,35 @@
       <div class="row">
         <div class="col-md-4">
           <div class="group_user-show-one">
-            <%= image_tag @member_user.image.url %>
+            <%= image_tag @member_user_show.image.url %>
           </div>
         </div>
         
         <div class="col-md-8">
           <div class="group_user-show-two"> 
             <h2 class="group_user-author">
-              <%= @member_user.name %>
+              <%= @member_user_show.name %>
             </h2>
             <table class="table">
               <tr>
                 <th>性別</th>
-                <td><%= @member_user.gender %></td>
+                <td><%= @member_user_show.gender %></td>
               </tr>
               <tr>
                 <th>都道府県</th>
-                <td><%= @member_user.prefectures %></td>
+                <td><%= @member_user_show.prefectures %></td>
               </tr>
               <tr>
                 <th>担当パート</th>
-                <td><%= @member_user.part %></td>
+                <td><%= @member_user_show.part %></td>
               </tr>
               <tr>
                 <th>好きなジャンル</th>
-                <td><%= @member_user.genre %></td>
+                <td><%= @member_user_show.genre %></td>
               </tr>
               <tr>
                 <th>好きなアーティスト</th>
-                <td><%= @member_user.artist %></td>
+                <td><%= @member_user_show.artist %></td>
               </tr>
               <tr>
                 <th>URL</th>
@@ -41,7 +41,7 @@
                         '',
                         width: 560,
                         height: 315,
-                        src: "https://www.youtube.com/embed/#{@member_user.url}",
+                        src: "https://www.youtube.com/embed/#{@member_user_show.url}",
                         # src: "https://www.youtube.com/embed/5GQnC6UUsZw",
                         frameborder: 0,
                         allowfullscreen: true
@@ -50,15 +50,15 @@
                 </td>
               </tr>
                 <th>自己PR</th>
-                <td><%= @member_user.description %></td>
+                <td><%= @member_user_show.description %></td>
               </tr>
             </table>
             
-             <%= link_to new_message_path(to_user_id: @member_user.user.id),method: :get, class: 'btn btn-primary' do %>
+             <%= link_to new_message_path(to_user_id: @member_user_show.user.id),method: :get, class: 'btn btn-primary' do %>
                 メッセージを送る
              <% end %>
               
-              <%= link_to users_messages_path(to_user_id: @member_user.user_id), method: :get, class: 'btn btn-primary' do %>
+              <%= link_to users_messages_path(to_user_id: @member_user_show.user_id), method: :get, class: 'btn btn-primary' do %>
                 メッセージ一覧
               <% end %>
           </div>

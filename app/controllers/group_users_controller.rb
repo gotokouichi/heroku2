@@ -20,7 +20,7 @@ class GroupUsersController < ApplicationController
   end
   
   def show
-    @group_user = GroupUser.find(params[:id])
+    @group_user_show = GroupUser.find(params[:id])
   end
   
   def edit

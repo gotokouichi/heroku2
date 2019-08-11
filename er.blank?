@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/ec2-user/environment/session/app/views/layouts/application.html.erb @ line 19 ActionView::CompiledTemplates#_app_views_layouts_application_html_erb___1639146698833624346_70256960997460:
+
+    [1;34m14[0m:     <% end %>
+    [1;34m15[0m:     
+    [1;34m16[0m:     <nav class="navbar navbar-default navbar-transparent">
+    [1;34m17[0m:       <div class="container">
+    [1;34m18[0m:         <% binding.pry %>
+ => [1;34m19[0m:         <% if logged_in? && login_group_user.blank? %>
+    [1;34m20[0m:           <%= link_to group_users_path do %>
+    [1;34m21[0m:             <span class="navbar-brand">Session</span>
+    [1;34m22[0m:           <% end %>
+    [1;34m23[0m:         <% elsif logged_in? && login_member_user.blank? %>
+    [1;34m24[0m:           <%= link_to member_users_path do %>
+
