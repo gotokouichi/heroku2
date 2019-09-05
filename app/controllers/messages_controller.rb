@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   def create
     @message = Message.new(message_params)
     @message.from_user_id = current_user.id
-    #binding.pry
+    
 
     if @message.save
       redirect_to users_messages_path(to_user_id: @message.to_user_id), success: '投稿に成功しました'
