@@ -66,5 +66,24 @@
         $(".alert").fadeOut(5000);
       });
     </script>
+   
+    <footer>
+      <nav class="navbar navbar-default navbar-transparent">
+       <% if logged_in? && login_group_user.blank? %>
+          <%= link_to group_users_path do %>
+            <span class="navbar-brand">Session</span>
+          <% end %>
+        <% elsif logged_in? && login_member_user.blank? %>
+          <%= link_to member_users_path do %>
+            <span class="navbar-brand">Session</span>
+          <% end %>  
+        <% else %>
+          <%= link_to member_users_path do %>
+             <span class="navbar-brand">Session</span>
+          <% end %> 
+        <% end %>
+        <p>Session 2019</p>
+      </nav>  
+    </footer>
   </body>
 </html>
