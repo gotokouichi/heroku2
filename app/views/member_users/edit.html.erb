@@ -4,6 +4,7 @@
       <div class="col-md-offset-2 col-md-8 users-new-container">
         <h1 class="profile-title">メンバープロフィール編集</h1>
         <%= form_for @member_user do |f| %>
+        
           <div class="form-group">
             <%= f.label :image, "画像" %>
             <%= f.file_field :image %>
@@ -48,6 +49,7 @@
             <%= f.label :description, "自己PR" %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
+          
          <div class="col-md-offset-4 col-md-4 register-users-new-container"> 
            <%= f.submit "更新", class: 'btn-block btn-primary' %>
          </div>

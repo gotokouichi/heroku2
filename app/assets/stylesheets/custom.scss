@@ -20,6 +20,16 @@ h1 {
   }
 }
 
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fafafa;
+}
+
 .top-hero-container {
   padding-top: 220px;
   h1 {
@@ -35,7 +45,15 @@ h1 {
 .text-center {
   font-size: 40px;
 }
-
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fafafa;
+}
 .users-new-container {
   padding-top: 220px;
 }
@@ -96,21 +114,26 @@ h1 {
 }
 
 .member_user-index-wrapper {
-  padding-top: 70px;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   background-color: #fafafa;
+  
   .member_user-index-single {
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left: 20px;
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
-    
     .member_user-author {
       padding-right: 20px;
       padding-left: 20px;
     }
-    
+   
     img {
       margin-top: 10px;
       margin-bottom: 20px;
@@ -124,7 +147,6 @@ h1 {
       padding-right: 20px;
       padding-left: 20px;
     }
-
     .topic-index-icon {
       width: 35px;
       height: 30px;
@@ -134,7 +156,12 @@ h1 {
 }
 
 .group_user-index-wrapper {
-  padding-top: 70px;
+  
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   background-color: #fafafa;
   .group_user-index-single {
     background-color: #fff;
@@ -296,4 +323,14 @@ h1 {
 
 footer{
    
+}
+
+.message-new-wrapper {
+   width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #fafafa;
 }
